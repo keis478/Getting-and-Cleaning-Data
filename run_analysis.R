@@ -18,7 +18,7 @@ activity <- rbind(y_train, y_test)
 ## 2. extract only the measurements on the mean and standard deviation
 ## extract the numbers of labels
 features <- read.table("features.txt")
-mean_std_features <- grep("mean|std", features$V2)
+mean_std_features <- grep("mean\\(\\)|std\\(\\)", features$V2)
 data <- data[, mean_std_features]
 
 ## 3. use descriptive activity
